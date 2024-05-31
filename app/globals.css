@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-interface-100 text-white text-primary-text text-base;
+}
+
+.stroke-decor {
+  background-image: url("data:image/svg+xml,%3Csvg width='429' height='18' viewBox='0 0 429 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 13C79.1885 6.96301 266.852 -1.48877 424 13' stroke='%23DAED1A' stroke-width='10' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+}
+
+.stroke-decor { 
+  @apply inline-block bg-no-repeat bg-center bg-full max-w-full;
+}
+
+.animated-line {
+  @apply relative;
+}
+
+.animated-line::before {
+  @apply content-[''] w-0 h-1 bg-primary absolute left-0 bottom-0 transition-size;
+}
+
+.animated-line:hover::before {
+  @apply w-full;
+}

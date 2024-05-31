@@ -1,0 +1,16 @@
+.next
+.vscode
+node_modules
+tsconfig.json
+public
+tailwind.config.ts
+jest.config.js
+next.config.js
+postcss.config.js
+.eslintrc.js
+out/
+components/**/*.test.tsx
+.prettierrc.js
+package.json
+package-lock.json
+README.md
