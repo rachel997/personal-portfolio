@@ -32,4 +32,4 @@ I always strive to achieve the best and it is not possible without listening oth
 
 ## Legal
 
-Design was created by [https://themeforest.net/user/quomodotheme](https://themeforest.net/user/quomodotheme) and I have a licence to use it on my website. You can use and modify my code under the Apache License 2.0 but remember that regarding the licence for the design I cannot resell, redistribute, or sublicense the design project itself.
+Design was created by [https://themeforest.net/user/quomodotheme](https://themeforest.net/user/quomodotheme) and I have a licence to use it on my website. You can use and modify my code under the GNU General Public License but remember that regarding the licence for the design I cannot resell, redistribute, or sublicense the design project itself.
