@@ -63,7 +63,7 @@ const Footer = () => {
       <Container customClass="text-center py-6">
         <p>{copyright ? copyright : 'Copyright © All rights reserved.'}</p>
         <p className="mt-2 text-sm">
-          Design by{' '}
+          Graphic design by{' '}
           <Link
             href="https://themeforest.net/user/quomodotheme"
             rel="nofollow"
