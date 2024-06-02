@@ -71,8 +71,8 @@ const timelineElements = [
     subtitle: 'Acclaim',
     description: [
       'I built beautiful and user-friendly websites from scratch using WordPress CMS. My focus on detail ensured pixel-perfect results and a great user experience. I also used ACF Pro and Gutenberg blocks to make development faster and more efficient. I prioritised website speed and consistently achieved perfect 100/100 PageSpeed scores.',
-      "I wasn't limited to websites. I also built dynamic web applications using React and Next.js. I have had integrated them with headless CMS solutions like Strapi or Sanity. My strong foundation in both JavaScript and React ensured I could effectively utilize these technologies and deliver successful projects.",
-      'Thrusted into a Team Lead role after a few months, I led teams of 2-6 developers. I have learned how to build a strong team and deliver projects on time. I juggled client collaboration, workload organization, and leading meetings to keep everyone aligned and on track.',
+      "I wasn't limited to websites. I also built dynamic web applications using React and Next.js. I integrated them with headless CMS solutions like Strapi or Sanity. My strong foundation in both JavaScript and React ensured I could effectively utilize these technologies and deliver successful projects.",
+      'Promoted into a Team Lead role after a few months, I led teams of 2-6 developers. I have learned how to build a strong team and deliver projects on time. I juggled client collaboration, workload organization, and leading meetings to keep everyone aligned and on track.',
     ],
     tiles: [
       'React',
@@ -212,13 +212,13 @@ export const resumeData = {
     yearsOfExperience: 4,
     yearsOfExperienceLabel: 'Years Experience',
     bio: [
-      "Creative Front-End Developer with a passion for building beautiful and functional UIs. I thrive in collaborative environments and have experience leading small teams I'm a quick learner who's always eager to grow and bring a positive, communicative approach to every project. My current learning plan, besides front-end related technologies, is to learn more about backend technologies (especially Node.js).",
+      "Creative Front-End Developer with a passion for building beautiful and functional UIs. I thrive in collaborative environments and have experience leading small teams. I'm a quick learner who's always eager to grow and bring a positive, communicative approach to every project. My current learning plan, besides front-end related technologies, is to learn more about backend technologies (especially Node.js).",
     ],
   },
   extendedSummary: {
     title: 'More about me',
     bio: [
-      "Putting work aside, I try to be as active as possible. First of all, I'm in love with Japan and Japanese culture. Therefore, I'm learning the Japanese language and training in martial arts, specifically Oyama Karate. I have a blue belt with a yellow stripe (7th kyu) and have plans to achieve even more.",
+      "Putting work aside, I try to be as active as possible. First of all, I'm in love with Japan and Japanese culture. Therefore, I'm learning the Japanese language and training martial arts, specifically Oyama Karate. I have a blue belt with a yellow stripe (7th kyu) and have plans to achieve even more.",
       "Besides karate, I'm also a frequent gym guest, working towards achieving a healthy lifestyle.",
       "Not only do I love to work out, but I'm also a keen book reader and literature lover. My interests aren't limited to reading – I'm trying to write my own novel, and sometimes I even create short stories.",
       "My third love is gaming. I especially love RPG games and platformers (Mario forever!). I value a good gaming experience, creative level design, and great stories. I'm also obsessed with logical riddles – if a game has them, count me in!",
