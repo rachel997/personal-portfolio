@@ -1,13 +1,10 @@
 import classNames from 'classnames';
-import { DividerProps } from './Divider.types';
+import { DividerProps } from './types';
 
 const Divider = ({ gapClass }: DividerProps) => {
-  const finalClasses = classNames(
-    gapClass ? gapClass : 'my-10',
-    'border-divider',
-  );
+  const dividerCx = classNames(gapClass ? gapClass : 'my-10', 'border-divider');
 
-  return <hr className={finalClasses} />;
+  return <hr className={dividerCx} />;
 };
 
 export default Divider;

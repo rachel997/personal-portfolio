@@ -20,7 +20,7 @@ const HeroSection = ({
     <section className="relative pt-32">
       <Container className="grid grid-cols-1 lg:grid-cols-2 gap-y-16 gap-x-10 py-12 sm:py-16">
         <div className="flex flex-col items-center lg:items-start justify-start lg:justify-center">
-          <Heading tag={1} customClass="text-center lg:text-start">
+          <Heading tag={1} className="text-center lg:text-start">
             {line1}
             {line2 && (
               <>
@@ -33,7 +33,7 @@ const HeroSection = ({
             <Heading
               tag={2}
               size="custom"
-              customClass="text-xl sm:text-3xl xl:text-3.5xl"
+              className="text-xl sm:text-3xl xl:text-3.5xl"
             >
               {subtitle}
             </Heading>

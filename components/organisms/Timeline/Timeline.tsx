@@ -12,7 +12,7 @@ const Timeline = ({ sectionID, heading, elements }: TimelineProps) => {
       <Container>
         <div className="text-center">
           <div className="relative text-center inline-block">
-            <Heading customClass="w-60 sm:w-auto">{heading}</Heading>
+            <Heading className="w-60 sm:w-auto">{heading}</Heading>
             <div className="stroke-decor w-60 sm:w-108 h-5 absolute left-0 right-0 mx-auto bottom-9 sm:bottom-0 z-minus-1"></div>
           </div>
         </div>
