@@ -1,31 +1,29 @@
 import classNames from 'classnames';
 import { ButtonProps } from './types';
+import { ColorCx, IconHoverDirectionCx, SizeCx } from './utils';
 
 const Button = ({
   children,
   size = 'lg',
   color = 'primary',
-  icon,
+  icon: Icon,
   iconHoverDirection = 'right',
   disabled = false,
   onClickFunction,
   className,
 }: ButtonProps) => {
-  const Icon = icon;
   const buttonCx = classNames(
     'text-interface-100 rounded-lg font-medium flex flex-row justify-between items-center gap-x-2 group relative overflow-hidden before:transition-size before:absolute before:h-full before:w-0 before:top-0 before:left-0 before:z-0 hover:before:w-full',
-    size === 'lg' && 'px-9 py-4 text-md',
-    size === 'sm' && 'px-7 py-2.5',
-    color === 'primary' && 'bg-primary before:bg-secondary',
-    color === 'secondary' && 'bg-secondary before:bg-primary',
+    SizeCx[size as keyof typeof SizeCx],
+    ColorCx[color as keyof typeof ColorCx],
     className,
-    iconHoverDirection === 'bottom' && '',
   );
 
   const iconCx = classNames(
     'relative transition-transform',
-    iconHoverDirection === 'bottom' && 'group-hover:translate-y-1',
-    iconHoverDirection === 'right' && 'group-hover:translate-x-1.5',
+    IconHoverDirectionCx[
+      iconHoverDirection as keyof typeof IconHoverDirectionCx
+    ],
   );
 
   return (
