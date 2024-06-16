@@ -1,11 +1,10 @@
-import { ReactNode } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import Button from '@atoms/Button/Button';
 import Container from '@atoms/Container/Container';
+import CustomLink from './CustomLink';
 import Heading from '@atoms/Heading/Heading';
 import PhotoDisclaimer from '@molecules/PhotoDisclaimer/PhotoDisclaimer';
-import { CallToActionProps } from './CallToAction.types';
+import { CallToActionProps } from './types';
 
 const CallToAction = ({
   image,
@@ -15,14 +14,8 @@ const CallToAction = ({
   link,
   disclaimer,
 }: CallToActionProps) => {
-  const { src, alt } = image;
+  const { src, alt } = image || {};
   const { href, text, icon, type } = link || {};
-
-  const ButtonEl: ReactNode = (
-    <Button icon={icon} iconHoverDirection="bottom">
-      {text}
-    </Button>
-  );
 
   return (
     <section
@@ -41,18 +34,14 @@ const CallToAction = ({
         </Heading>
         <div className="flex flex-col items-center lg:items-start justify-center">
           <p className="text-lg">{content}</p>
-          {type === 'download' ? (
-            <Link href={href} download className="mt-6" target="_blank">
-              {ButtonEl}
-            </Link>
-          ) : (
-            <Link href={href} className="mt-6">
-              {ButtonEl}
-            </Link>
-          )}
+          <CustomLink type={type} href={href}>
+            <Button icon={icon} iconHoverDirection="bottom">
+              {text}
+            </Button>
+          </CustomLink>
         </div>
       </Container>
-      <PhotoDisclaimer {...disclaimer} />
+      {disclaimer && <PhotoDisclaimer {...disclaimer} />}
     </section>
   );
 };
