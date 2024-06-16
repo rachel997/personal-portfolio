@@ -4,3 +4,8 @@ export type PhotoDisclaimerProps = {
   source?: string;
   sourceHref?: string;
 };
+
+export type CustomLinkProps = {
+  text: string;
+  href?: string;
+};

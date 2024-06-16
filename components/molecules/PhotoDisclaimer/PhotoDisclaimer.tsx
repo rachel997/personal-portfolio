@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { PhotoDisclaimerProps } from './PhotoDisclaimer.types';
+import { PhotoDisclaimerProps } from './types';
+import CustomLink from './CustomLink';
 
 const PhotoDisclaimer = ({
   author,
@@ -9,40 +9,9 @@ const PhotoDisclaimer = ({
 }: PhotoDisclaimerProps) => {
   return (
     <div className="absolute right-2 bottom-2 text-xxs">
-      Photo by{' '}
-      {author && (
-        <>
-          {authorHref ? (
-            <Link
-              href={authorHref}
-              target="_blank"
-              rel="nofollow"
-              className="hover:underline"
-            >
-              {author}
-            </Link>
-          ) : (
-            author
-          )}{' '}
-        </>
-      )}
-      on{' '}
-      {source && (
-        <>
-          {sourceHref ? (
-            <Link
-              href={sourceHref}
-              target="_blank"
-              rel="nofollow"
-              className="hover:underline"
-            >
-              {source}
-            </Link>
-          ) : (
-            source
-          )}
-        </>
-      )}
+      Photo by {author && <CustomLink text={author} href={authorHref} />}
+      {author && source && ' '}
+      {source && <CustomLink text={source} href={sourceHref} />}
     </div>
   );
 };
