@@ -1,19 +1,18 @@
 import classNames from 'classnames';
-import { SkillsProps } from './Skills.types';
+import { SkillsProps } from './types';
+import { ColorCx, SizeCx } from './utils';
 
 const Skills = ({ skills, color = 'primary', size = 'small' }: SkillsProps) => {
-  const classes = classNames(
+  const SkillsCx = classNames(
     'rounded-md px-3 py-1',
-    color === 'primary' && 'bg-primary text-interface-100',
-    color === 'interface-300' && 'bg-interface-300',
-    size === 'small' && 'text-sm',
-    size === 'big' && 'text-lg lg:text-xl',
+    ColorCx[color as keyof typeof ColorCx],
+    SizeCx[size as keyof typeof SizeCx],
   );
 
   return (
     <ul className="flex flex-row flex-wrap items-start justify-start gap-4 lg:pr-12">
       {skills.map(skill => (
-        <li key={skill} className={classes}>
+        <li key={skill} className={SkillsCx}>
           {skill}
         </li>
       ))}
