@@ -11,7 +11,7 @@ const Heading = ({
   fontWeight = 600,
 }: HeadingProps) => {
   const sizeKey = `h${size ? size : tag}`;
-  const fontWeightKey = `h${size ? size : tag}`;
+  const fontWeightKey = `f${fontWeight ? fontWeight : tag}`;
 
   const mergedClasses = twMerge(
     classNames(
