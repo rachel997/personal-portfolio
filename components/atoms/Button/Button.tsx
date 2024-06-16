@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { ButtonProps } from './Button.types';
+import { ButtonProps } from './types';
 
 const Button = ({
   children,
@@ -12,7 +12,7 @@ const Button = ({
   className,
 }: ButtonProps) => {
   const Icon = icon;
-  const classes = classNames(
+  const buttonCx = classNames(
     'text-interface-100 rounded-lg font-medium flex flex-row justify-between items-center gap-x-2 group relative overflow-hidden before:transition-size before:absolute before:h-full before:w-0 before:top-0 before:left-0 before:z-0 hover:before:w-full',
     size === 'lg' && 'px-9 py-4 text-md',
     size === 'sm' && 'px-7 py-2.5',
@@ -22,17 +22,17 @@ const Button = ({
     iconHoverDirection === 'bottom' && '',
   );
 
-  const iconClasses = classNames(
+  const iconCx = classNames(
     'relative transition-transform',
     iconHoverDirection === 'bottom' && 'group-hover:translate-y-1',
     iconHoverDirection === 'right' && 'group-hover:translate-x-1.5',
   );
 
   return (
-    <button className={classes} disabled={disabled} onClick={onClickFunction}>
+    <button className={buttonCx} disabled={disabled} onClick={onClickFunction}>
       <span className="relative z-1">{children}</span>
       {Icon && (
-        <span className={iconClasses}>
+        <span className={iconCx}>
           <Icon />
         </span>
       )}

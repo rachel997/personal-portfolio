@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 import { twMerge } from 'tailwind-merge';
-import { ContainerProps } from './Container.types';
+import { ContainerProps } from './types';
 
-const Container = ({ children, customClass }: ContainerProps) => {
-  const displayedClasses = twMerge(
-    classNames('md:container mx-auto px-4', customClass),
+const Container = ({ children, className }: ContainerProps) => {
+  const containerCx = twMerge(
+    classNames('md:container mx-auto px-4', className),
   );
 
-  return <div className={displayedClasses}>{children}</div>;
+  return <div className={containerCx}>{children}</div>;
 };
 
 export default Container;

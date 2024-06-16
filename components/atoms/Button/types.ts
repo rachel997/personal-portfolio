@@ -1,13 +1,15 @@
 import { ReactNode } from 'react';
 
 type ClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => void;
+type Size = 'sm' | 'lg';
+type IconHoverDirection = 'right' | 'bottom';
 
 export type ButtonProps = {
   children: ReactNode;
-  size?: 'sm' | 'lg';
+  size?: Size;
   color?: 'primary' | 'secondary';
   icon?: React.ElementType;
-  iconHoverDirection?: 'right' | 'bottom';
+  iconHoverDirection?: IconHoverDirection;
   disabled?: boolean;
   onClickFunction?: ClickHandler;
   className?: string;

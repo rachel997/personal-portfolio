@@ -5,7 +5,7 @@ import { SocialMediaLinksProps } from './SocialMediaLinks.types';
 const SocialMediaLinks = ({ sectionID, elements }: SocialMediaLinksProps) => {
   return (
     <section id={sectionID ?? ''} className="pt-16 sm:pt-28">
-      <Container customClass="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-8">
+      <Container className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-8">
         {elements &&
           elements.length > 0 &&
           elements.map(({ href, label, icon: Icon }) => {

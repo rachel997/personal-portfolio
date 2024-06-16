@@ -21,7 +21,7 @@ const Footer = () => {
             className="absolute right-0 top-0 w-full h-full object-cover object-right-top z-minus-1"
           />
         )}
-        <Container customClass="text-center">
+        <Container className="text-center">
           {heading && (
             <div className="relative inline-block">
               <Heading>{heading}</Heading>
@@ -60,7 +60,7 @@ const Footer = () => {
         </Container>
       </div>
       <Divider gapClass="m-0" />
-      <Container customClass="text-center py-6">
+      <Container className="text-center py-6">
         <p>{copyright ? copyright : 'Copyright © All rights reserved.'}</p>
         <p className="mt-2 text-sm">
           Graphic design by{' '}

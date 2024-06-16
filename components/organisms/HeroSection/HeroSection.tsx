@@ -18,7 +18,7 @@ const HeroSection = ({
 
   return (
     <section className="relative pt-32">
-      <Container customClass="grid grid-cols-1 lg:grid-cols-2 gap-y-16 gap-x-10 py-12 sm:py-16">
+      <Container className="grid grid-cols-1 lg:grid-cols-2 gap-y-16 gap-x-10 py-12 sm:py-16">
         <div className="flex flex-col items-center lg:items-start justify-start lg:justify-center">
           <Heading tag={1} customClass="text-center lg:text-start">
             {line1}

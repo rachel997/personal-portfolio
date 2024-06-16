@@ -29,7 +29,7 @@ const HomePage = () => {
   return (
     <>
       <header className="fixed w-full top-0 left-0 z-50">
-        <Container customClass="relative pt-6">
+        <Container className="relative pt-6">
           <div className="bg-white p-5 rounded-xl flex flex-row items-center justify-between gap-4 relative z-1">
             <Logo />
             <button
