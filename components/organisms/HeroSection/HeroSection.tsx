@@ -1,9 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import Button from '@atoms/Button/Button';
 import Container from '@atoms/Container/Container';
-import Heading from '@atoms/Heading/Heading';
-import { HeroSectionProps } from './HeroSection.types';
+import Content from './Content';
+import { HeroSectionProps } from './types';
 
 const HeroSection = ({
   title,
@@ -13,40 +11,16 @@ const HeroSection = ({
   backgroundImage,
   image,
 }: HeroSectionProps) => {
-  const { line1, line2 } = title || {};
-  const { href, text, icon } = link;
-
   return (
     <section className="relative pt-32">
       <Container className="grid grid-cols-1 lg:grid-cols-2 gap-y-16 gap-x-10 py-12 sm:py-16">
         <div className="flex flex-col items-center lg:items-start justify-start lg:justify-center">
-          <Heading tag={1} className="text-center lg:text-start">
-            {line1}
-            {line2 && (
-              <>
-                <br />
-                Rachela Markwica
-              </>
-            )}
-          </Heading>
-          <div className="inline-block relative">
-            <Heading
-              tag={2}
-              size="custom"
-              className="text-xl sm:text-3xl xl:text-3.5xl"
-            >
-              {subtitle}
-            </Heading>
-            <div className="stroke-decor w-full h-5 absolute left-0 -bottom-1 sm:bottom-0 xl:bottom-2 z-minus-1 hidden sm:block"></div>
-          </div>
-          <p className="text-lg sm:text-xl mt-8 text-center lg:text-left">
-            {content}
-          </p>
-          <Link href={href}>
-            <Button icon={icon} className="mt-8">
-              {text}
-            </Button>
-          </Link>
+          <Content
+            title={title}
+            subtitle={subtitle}
+            content={content}
+            link={link}
+          />
         </div>
 
         <div className="flex flex-row items-center justify-center lg:justify-end">

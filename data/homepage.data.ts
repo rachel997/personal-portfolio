@@ -297,8 +297,8 @@ export const socialMediaData = {
 
 export const heroSectionData = {
   title: {
-    line1: '👋 Hey, I am',
-    line2: 'Rachela Markwica',
+    headline: '👋 Hey, I am',
+    subheadline: 'Rachela Markwica',
   },
   subtitle: 'Front-end Developer',
   content: 'Always keen to learn and explore new opportunities.',
