@@ -1,8 +1,8 @@
 import { JobInfoProps } from '@organisms/JobInfo/JobInfo.types';
 
-interface Element extends JobInfoProps {
+type Element = JobInfoProps & {
   id: number;
-}
+};
 
 export type TimelineProps = {
   sectionID?: string;

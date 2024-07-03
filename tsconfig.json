@@ -22,7 +22,7 @@
       "@/*": ["./*"],
       "@atoms/*": ["./components/atoms/*"],
       "@data/*": ["./data/*"],
-      "@hooks/*": ["./hooks/*"],
+      "@utils/*": ["./utils/*"],
       "@images/*": ["./assets/images/*"],
       "@molecules/*": ["./components/molecules/*"],
       "@organisms/*": ["./components/organisms/*"]

@@ -1,8 +1,8 @@
 import { JobInfoProps } from '@organisms/JobInfo/JobInfo.types';
 
-interface Job extends JobInfoProps {
+type Job = JobInfoProps & {
   id: number;
-}
+};
 
 type Tool = {
   label: string;

@@ -20,9 +20,9 @@ export const homepageCtaData = {
     src: background,
     alt: 'Background image for "Download my CV" section',
   },
-  heading: 'Are you searching for a new team member? 🕵️',
+  heading: 'Are you seeking for a new team member? 🕵️',
   content:
-    'Search no more! I truly believe that I will become a good fit for your team and that we can build awesome things together.',
+    'Seek no more! I truly believe that I will become a good fit for your team and that we can build awesome things together.',
   link: {
     href: '/CV_Rachela_Markwica.pdf',
     text: 'Download CV',
@@ -239,6 +239,8 @@ export const resumeData = {
       'JavaScript',
       'TypeScript',
       'Redux',
+      'SOLID',
+      'OOP',
       'Tailwind',
       'SASS',
       'CSS',

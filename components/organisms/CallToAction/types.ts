@@ -1,16 +1,16 @@
 import { ReactNode } from 'react';
 import { StaticImageData } from 'next/image';
 
-type Image = {
-  src: StaticImageData;
-  alt: string;
-};
-
 type Link = {
   href: string;
   text: string;
   icon?: React.ElementType;
   type?: string;
+};
+
+type Image = {
+  src: StaticImageData;
+  alt: string;
 };
 
 type Disclaimer = {
@@ -22,15 +22,19 @@ type Disclaimer = {
 
 export type CallToActionProps = {
   sectionID?: string;
-  image: Image;
   heading: string;
   content: string;
   link: Link;
   disclaimer?: Disclaimer;
+  image: Image;
 };
 
 export type CustomLinkProps = {
   children: ReactNode;
   type?: string;
   href: string;
+};
+
+export type BackgroundProps = {
+  image: Image;
 };

@@ -15,4 +15,6 @@ export const headerNavLinks = [
     label: 'Contact',
     href: '#contact',
   },
-];
+].map((element, i) => {
+  return { ...element, id: i };
+});

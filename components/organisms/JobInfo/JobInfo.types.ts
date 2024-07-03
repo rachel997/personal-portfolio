@@ -1,9 +1,9 @@
-export interface JobInfoProps {
+export type JobInfoProps = {
   title: string;
   subtitle: string;
-  description?: Array<string>;
-  tiles?: Array<string>;
+  description?: string[];
+  tiles?: string[];
   isHighlighted: boolean;
   badge: string;
   hightlightedBadge?: string;
-}
+};

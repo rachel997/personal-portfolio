@@ -1,6 +1,3 @@
-import { Fragment } from 'react';
-import Link from 'next/link';
-import Container from '@atoms/Container/Container';
 import Copyrights from './Copyrights';
 import Divider from '@atoms/Divider/Divider';
 import TextCallToAction from '@organisms/TextCallToAction/TextCallToAction';
