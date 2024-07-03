@@ -63,7 +63,7 @@ const timelineElements = [
       'Jira',
     ],
     isHighlighted: false,
-    badge: 'Sep 2022 - Oct 2023',
+    badge: '09/2022 - 10/2023',
     hightlightedBadge: 'Current',
   },
   {
@@ -92,7 +92,7 @@ const timelineElements = [
       'Team leadership',
     ],
     isHighlighted: false,
-    badge: 'Sep 2020 - Aug 2022',
+    badge: '09/2020 - 08/2022',
     hightlightedBadge: 'Current',
   },
   {

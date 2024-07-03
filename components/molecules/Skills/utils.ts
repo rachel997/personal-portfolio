@@ -5,5 +5,5 @@ export enum ColorCx {
 
 export enum SizeCx {
   small = 'text-sm',
-  big = 'text-lg lg:text-xl',
+  big = 'text-md md:text-lg lg:text-xl',
 }
