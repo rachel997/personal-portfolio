@@ -1,4 +1,4 @@
-import { JobInfoProps } from '@organisms/JobInfo/JobInfo.types';
+import { JobInfoProps } from '@/components/organisms/JobInfo/types';
 
 type Job = JobInfoProps & {
   id: number;

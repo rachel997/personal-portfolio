@@ -6,6 +6,7 @@ import Divider from '@atoms/Divider/Divider';
 import Heading from '@atoms/Heading/Heading';
 import JobInfo from '@organisms/JobInfo/JobInfo';
 import Skills from '@molecules/Skills/Skills';
+import TextContent from '@molecules/TextContent/TextContent';
 import { ResumeProps } from './Resume.types';
 import decor from '@images/decor.svg';
 
@@ -51,10 +52,8 @@ const Resume = ({
                 </div>
               </div>
               <div className="flex flex-col items-start items-center gap-y-3 border-t border-divider pt-5 mt-5">
-                <div className="flex flex-col justify-start items-start gap-y-3 w-full">
-                  {bio.map(paragraph => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
+                <div className="flex flex-col justify-start items-start gap-y-3 ">
+                  <TextContent paragraphs={bio} className="w-full" />
                 </div>
               </div>
             </div>
@@ -141,11 +140,7 @@ const Resume = ({
               {extendedSummaryTitle}
             </Heading>
             <Divider gapClass="mt-2 mb-8" />
-            <div className="flex flex-col justify-start items-start gap-y-3 w-full">
-              {extendedBio.map(paragraph => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
+            <TextContent paragraphs={extendedBio} className="w-full" />
           </div>
         </div>
       </Container>

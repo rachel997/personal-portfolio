@@ -1,8 +1,9 @@
 import classNames from 'classnames';
 import Divider from '@atoms/Divider/Divider';
 import Heading from '@atoms/Heading/Heading';
+import TextContent from '@molecules/TextContent/TextContent';
 import Skills from '@molecules/Skills/Skills';
-import { JobInfoProps } from './JobInfo.types';
+import { JobInfoProps } from './types';
 
 const JobInfo = ({
   title,
@@ -36,11 +37,7 @@ const JobInfo = ({
       {description && description.length > 0 && (
         <>
           <Divider gapClass="m-0 w-full" />
-          <div className="flex flex-col justify-start items-start gap-y-3">
-            {description.map(paragraph => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
+          <TextContent paragraphs={description} />
         </>
       )}
       <Divider gapClass="m-0 w-full" />
