@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Container from '@atoms/Container/Container';
-import { SocialMediaLinksProps } from './SocialMediaLinks.types';
+import { SocialMediaLinksProps } from './types';
 
 const SocialMediaLinks = ({ sectionID, elements }: SocialMediaLinksProps) => {
   return (

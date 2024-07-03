@@ -1,8 +1,8 @@
-import classNames from 'classnames';
 import Container from '@atoms/Container/Container';
 import Heading from '@atoms/Heading/Heading';
 import JobInfo from '@organisms/JobInfo/JobInfo';
-import { TimelineProps } from './Timeline.types';
+import { TimelineProps } from './types';
+import { uiCx } from './utils';
 
 const Timeline = ({ sectionID, heading, elements }: TimelineProps) => {
   const elementsLength = elements ? elements.length : 0;
@@ -33,32 +33,15 @@ const Timeline = ({ sectionID, heading, elements }: TimelineProps) => {
                 },
                 i,
               ) => {
-                const wrapperClass = classNames(
-                  'w-full',
-                  (i + 1) % 2 !== 0 && 'flex flex-row items-start justify-end',
-                );
-                const blockClass = classNames(
-                  'relative w-full lg:w-1/2',
-                  (i + 1) % 2 === 0 ? 'lg:pr-10' : 'lg:pl-10',
-                );
-                const roundedDecorClass = classNames(
-                  'w-6 h-6 absolute inset-x-0 lg:inset-x-unset -bottom-12 lg:inset-y-0 absolute mx-auto lg:mx-unset lg:my-auto bg-primary rounded-full',
-                  (i + 1) % 2 === 0 ? 'lg:-right-3' : 'lg:-left-3',
-                  i + 1 === elementsLength && 'hidden lg:block',
-                );
-                const lineDecorClass = classNames(
-                  'hidden lg:block w-1 h-1/2 bg-interface-100 absolute',
-                  (i + 1) % 2 === 0 ? '-right-0.5' : '-left-0.5',
-                  i === 0 && 'top-0',
-                  i + 1 === elementsLength && 'bottom-0',
-                );
+                const { wrapperCx, blockCx, roundedDecorCx, lineDecorCx } =
+                  uiCx(i, elementsLength);
                 return (
-                  <li key={id} className={wrapperClass}>
-                    <div className={blockClass}>
+                  <li key={id} className={wrapperCx}>
+                    <div className={blockCx}>
                       {(i === 0 || i + 1 === elementsLength) && (
-                        <div className={lineDecorClass}></div>
+                        <div className={lineDecorCx}></div>
                       )}
-                      <div className={roundedDecorClass}>
+                      <div className={roundedDecorCx}>
                         <div className="w-3 h-3 absolute top-0 left-0 right-0 bottom-0 m-auto bg-interface-100 rounded-full"></div>
                       </div>
                       <div className="border border-divider p-6 rounded-xl bg-interface-200">
