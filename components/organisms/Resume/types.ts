@@ -1,8 +1,14 @@
 import { ReactNode } from 'react';
-import { JobInfoProps } from '@/components/organisms/JobInfo/types';
+import { JobInfoProps } from '@organisms/JobInfo/types';
+import { Color, Size } from '@molecules/TagCloud/types';
 
 type Job = JobInfoProps & {
   id: number;
+};
+
+type Link = {
+  href: string;
+  text: string;
 };
 
 type Tool = {
@@ -11,39 +17,48 @@ type Tool = {
   icon: React.ElementType;
 };
 
+type Skills = {
+  title: string;
+  elements: string[];
+};
+
+type Summary = {
+  name: string;
+  position: string;
+  yearsOfExperience: number;
+  yearsOfExperienceLabel: string;
+  bio: string[];
+};
+
+type EmploymentHistory = {
+  jobs: Job[];
+  link: Link;
+};
+
+type ExtendedSummary = {
+  title: string;
+  bio: string[];
+};
+
+type Tools = {
+  title: string;
+  elements: Tool[];
+};
+
+type Languages = {
+  title: string;
+  elements: string[];
+};
+
 export type ResumeProps = {
   sectionID?: string;
   heading: string;
-  summary: {
-    name: string;
-    position: string;
-    yearsOfExperience: number;
-    yearsOfExperienceLabel: string;
-    bio: Array<string>;
-  };
-  extendedSummary: {
-    title: string;
-    bio: Array<string>;
-  };
-  employmentHistory: {
-    jobs: Job[];
-    link: {
-      href: string;
-      text: string;
-    };
-  };
-  skills: {
-    title: string;
-    elements: Array<string>;
-  };
-  tools: {
-    title: string;
-    elements: Tool[];
-  };
-  languages: {
-    title: string;
-    elements: Array<string>;
-  };
+  summary: Summary;
+  extendedSummary: ExtendedSummary;
+  employmentHistory: EmploymentHistory;
+  skills: Skills;
+  tools: Tools;
+  languages: Languages;
 };
 
 export type ResumeSectionProps = {
@@ -51,3 +66,10 @@ export type ResumeSectionProps = {
   children: ReactNode;
   className?: string;
 };
+
+export type TagsSectionProps = Skills & {
+  tagSize: Size;
+  tagColor: Color;
+};
+
+export type SummaryProps = Summary & EmploymentHistory;
