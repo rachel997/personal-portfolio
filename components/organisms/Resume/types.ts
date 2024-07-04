@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { JobInfoProps } from '@/components/organisms/JobInfo/types';
 
 type Job = JobInfoProps & {
@@ -5,6 +6,7 @@ type Job = JobInfoProps & {
 };
 
 type Tool = {
+  id: number;
   label: string;
   icon: React.ElementType;
 };
@@ -42,4 +44,10 @@ export type ResumeProps = {
     title: string;
     elements: Array<string>;
   };
+};
+
+export type ResumeSectionProps = {
+  title: string;
+  children: ReactNode;
+  className?: string;
 };

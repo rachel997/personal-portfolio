@@ -1,7 +1,7 @@
 import Divider from '@atoms/Divider/Divider';
 import JobInfoHeader from './JobInfoHeader';
 import TextContent from '@molecules/TextContent/TextContent';
-import Skills from '@molecules/Skills/Skills';
+import TagCloud from '@molecules/TagCloud/TagCloud';
 import { JobInfoProps } from './types';
 
 const JobInfo = ({
@@ -30,7 +30,7 @@ const JobInfo = ({
         </>
       )}
       <Divider gapClass="m-0 w-full" />
-      {tiles && tiles.length > 0 && <Skills skills={tiles} />}
+      {tiles && tiles.length > 0 && <TagCloud tags={tiles} />}
     </div>
   );
 };

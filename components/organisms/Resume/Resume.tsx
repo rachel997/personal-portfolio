@@ -2,12 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Button from '@atoms/Button/Button';
 import Container from '@atoms/Container/Container';
-import Divider from '@atoms/Divider/Divider';
 import Heading from '@atoms/Heading/Heading';
+import IconsList from '@organisms/IconsList/IconsList';
 import JobInfo from '@organisms/JobInfo/JobInfo';
-import Skills from '@molecules/Skills/Skills';
+import ResumeSection from './ResumeSection';
+import TagCloud from '@molecules/TagCloud/TagCloud';
 import TextContent from '@molecules/TextContent/TextContent';
-import { ResumeProps } from './Resume.types';
+import { ResumeProps } from './types';
 import decor from '@images/decor.svg';
 
 const Resume = ({
@@ -98,50 +99,21 @@ const Resume = ({
             </div>
           </div>
           <div className="grid sm:grid-cols-2 mt-16 gap-y-12">
-            <div>
-              <Heading tag={3} size={4} fontWeight={400}>
-                {skillsTitle}
-              </Heading>
-              <Divider gapClass="mt-2 mb-8" />
-              <Skills skills={skillsList} size="big" color="interface-300" />
-            </div>
+            <ResumeSection title={skillsTitle}>
+              <TagCloud tags={skillsList} size="big" color="interface-300" />
+            </ResumeSection>
             <div className="flex flex-col justify-start items-start gap-y-10">
-              <div className="w-full">
-                <Heading tag={3} size={4} fontWeight={400}>
-                  {languagesTitle}
-                </Heading>
-                <Divider gapClass="mt-2 mb-8" />
-                <Skills skills={languagesList} size="big" color="primary" />
-              </div>
-              <div className="w-full">
-                <Heading tag={3} size={4} fontWeight={400}>
-                  {toolsTitle}
-                </Heading>
-                <Divider gapClass="mt-2 mb-8" />
-                <ul className="flex flex-row flex-wrap items-start justify-start gap-4">
-                  {toolsList.map(({ label, icon: Icon }) => {
-                    return (
-                      <li
-                        className="w-16 h-16 flex items-center justify-center  bg-interface-300 rounded-md text-2xl"
-                        title={label}
-                        key={label}
-                      >
-                        <Icon />
-                        <span className="sr-only">{label}</span>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
+              <ResumeSection title={languagesTitle} className="w-full">
+                <TagCloud tags={languagesList} size="big" color="primary" />
+              </ResumeSection>
+              <ResumeSection title={toolsTitle} className="w-full">
+                <IconsList icons={toolsList} />
+              </ResumeSection>
             </div>
           </div>
-          <div className="mt-16">
-            <Heading tag={3} size={4} fontWeight={400}>
-              {extendedSummaryTitle}
-            </Heading>
-            <Divider gapClass="mt-2 mb-8" />
+          <ResumeSection title={extendedSummaryTitle} className="mt-16">
             <TextContent paragraphs={extendedBio} className="w-full" />
-          </div>
+          </ResumeSection>
         </div>
       </Container>
     </section>
