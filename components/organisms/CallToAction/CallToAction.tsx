@@ -29,7 +29,7 @@ const CallToAction = ({
         <div className="flex flex-col items-center lg:items-start justify-center">
           <p className="text-lg">{content}</p>
           <CustomLink type={type} href={href}>
-            <Button icon={icon} iconHoverDirection="bottom">
+            <Button icon={icon} iconHoverDirection="bottom" tabindex={-1}>
               {text}
             </Button>
           </CustomLink>

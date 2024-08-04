@@ -12,7 +12,7 @@ const Copyrights = ({ text }: CopyrightsProps) => {
           href="https://themeforest.net/user/quomodotheme"
           rel="nofollow"
           target="_blank"
-          className="animated-line"
+          className="animated-line focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary"
         >
           QuomodoTheme
         </Link>

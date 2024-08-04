@@ -9,7 +9,7 @@ const NavLink = ({ label, href, setMenuVisibility }: NavLinkProps) => {
     <li>
       <Link
         href={href}
-        className="animated-line"
+        className="animated-line focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-interface-300"
         onClick={() => handleToggleMenu(isDesktop, true, setMenuVisibility)}
       >
         {label}

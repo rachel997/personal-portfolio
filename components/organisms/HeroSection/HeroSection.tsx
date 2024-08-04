@@ -28,14 +28,14 @@ const HeroSection = ({
             src={image}
             width={660}
             height={660}
-            alt="Picture of the author"
+            alt="Picture of the Rachela Markwica"
             className="-xl:mr-16"
           />
         </div>
       </Container>
       <Image
         src={backgroundImage}
-        alt="Background"
+        alt=""
         className="absolute top-0 left-0 w-full h-full object-cover object-bottom z-minus-1"
         width={1920}
         height={981}

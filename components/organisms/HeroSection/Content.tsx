@@ -31,8 +31,11 @@ const Content = ({ title, subtitle, content, link }: ContentProps) => {
       <p className="text-lg sm:text-xl mt-8 text-center lg:text-left">
         {content}
       </p>
-      <Link href={href}>
-        <Button icon={icon} className="mt-8">
+      <Link
+        href={href}
+        className="mt-8 focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-pink"
+      >
+        <Button icon={icon} tabindex={-1}>
           {text}
         </Button>
       </Link>

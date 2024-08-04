@@ -19,6 +19,8 @@ const config: Config = {
       secondary: '#FFC403',
       transparent: 'transparent',
       white: '#FFFFFF',
+      black: '#000000',
+      pink: '#FA59C9',
     },
     fontSize: {
       xxs: '0.625rem',
@@ -57,6 +59,7 @@ const config: Config = {
       },
       zIndex: {
         1: '1',
+        2: '2',
         'minus-1': '-1',
       },
     },

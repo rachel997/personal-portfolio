@@ -8,7 +8,7 @@ const LogoImage = () => {
       src={logo}
       width={156}
       height={50}
-      alt="Rachela Markwica - Portfolio"
+      alt="Rachela Markwica - Portfolio - Logo image"
     />
   );
 };

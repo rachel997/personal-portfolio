@@ -18,7 +18,7 @@ const Links = ({ links }: LinksProps) => {
               )}
               <Link
                 href={href}
-                className="font-medium text-lg sm:text-xl animated-line"
+                className="font-medium text-lg sm:text-xl animated-line focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-primary"
               >
                 {text}
               </Link>

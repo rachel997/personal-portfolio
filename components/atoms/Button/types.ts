@@ -13,4 +13,5 @@ export type ButtonProps = {
   disabled?: boolean;
   onClickFunction?: ClickHandler;
   className?: string;
+  tabindex?: number;
 };

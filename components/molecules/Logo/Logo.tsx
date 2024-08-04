@@ -14,7 +14,11 @@ const Logo = ({ linkToHomepage = true, className }: LogoProps) => {
   );
 
   return linkToHomepage ? (
-    <Link href="/" className="transition-opacity hover:opacity-80">
+    <Link
+      href="/"
+      className="transition-opacity hover:opacity-80 focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-interface-300"
+      aria-label="Link to homepage"
+    >
       <LogoImage />
     </Link>
   ) : (

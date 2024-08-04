@@ -13,7 +13,7 @@ const SocialMediaLinks = ({ sectionID, elements }: SocialMediaLinksProps) => {
               <Link
                 href={href}
                 target="_blank"
-                className="transition-all border border-dashed border-white/20 bg-white/[.02] rounded-xl font-semibold text-lg sm:text-xl lg:text-2xl text-white py-8 px-6 flex flex-row items-center justify-center gap-x-2 hover:bg-primary hover:text-interface-100 hover:border-solid hover:border-primary"
+                className="transition-all border border-dashed border-white/20 bg-white/[.02] rounded-xl font-semibold text-lg sm:text-xl lg:text-2xl text-white py-8 px-6 flex flex-row items-center justify-center gap-x-2 hover:bg-primary hover:text-interface-100 hover:border-solid hover:border-primary focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-primary"
                 key={label}
               >
                 <Icon />

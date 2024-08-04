@@ -7,7 +7,7 @@ const CustomLink = ({ text, href }: CustomLinkProps) => {
       href={href}
       target="_blank"
       rel="nofollow"
-      className="hover:underline"
+      className="hover:underline focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary"
     >
       {text}
     </Link>

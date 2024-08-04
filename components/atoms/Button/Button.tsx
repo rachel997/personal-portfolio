@@ -11,6 +11,7 @@ const Button = ({
   disabled = false,
   onClickFunction,
   className,
+  tabindex,
 }: ButtonProps) => {
   const buttonCx = classNames(
     'text-interface-100 rounded-lg font-medium flex flex-row justify-between items-center gap-x-2 group relative overflow-hidden before:transition-size before:absolute before:h-full before:w-0 before:top-0 before:left-0 before:z-0 hover:before:w-full',
@@ -27,7 +28,12 @@ const Button = ({
   );
 
   return (
-    <button className={buttonCx} disabled={disabled} onClick={onClickFunction}>
+    <button
+      className={buttonCx}
+      disabled={disabled}
+      onClick={onClickFunction}
+      tabIndex={tabindex}
+    >
       <span className="relative z-1">{children}</span>
       {Icon && (
         <span className={iconCx}>

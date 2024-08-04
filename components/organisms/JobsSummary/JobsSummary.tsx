@@ -32,8 +32,11 @@ const JobsSummary = ({ jobs, link }: JobsSummaryProps) => {
         })}
       </ul>
       {link.href && link.text && (
-        <Link href={link.href} className="mt-4 inline-block">
-          <Button size="sm" color="secondary">
+        <Link
+          href={link.href}
+          className="mt-4 inline-block focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-pink"
+        >
+          <Button size="sm" color="secondary" tabindex={-1}>
             {link.text}
           </Button>
         </Link>

@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={workSans.className}>
         <Header />
-        <main>{children}</main>
+        <main id="main">{children}</main>
         <Footer />
       </body>
     </html>
